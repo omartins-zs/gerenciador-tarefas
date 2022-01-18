@@ -21,12 +21,14 @@
         </div>
         <div class="form">
             <form action="" method="get">
-                <label for="task_name"></label>
+                <label for="task_name">Tarefa:</label>
                 <input type="text" name="task_name" placeholder="Nome da tarefa">
                 <button type="submit">Cadastrar</button>
             </form>
         </div>
-        <div class="separator"></div>
+        <div class="separator">
+            
+        </div>
         <div class="list-tasks">
             <ul>
                 <li>Tarefa 1</li>
