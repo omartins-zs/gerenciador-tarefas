@@ -11,6 +11,10 @@ if (isset($_GET['task_name'])) {
     unset($_GET['task_name']);
 }
 
+if (isset($_GET['clear'])) {
+    unset($_SESSION['tasks']);
+}
+
 ?>
 
 <!DOCTYPE html>
