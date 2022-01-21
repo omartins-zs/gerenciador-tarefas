@@ -61,7 +61,10 @@ if (isset($_GET['clear'])) {
                 }
 
             ?>
-
+            <form action="" method="get">
+                <input type="hidden" name="clear" value="clear">
+                <button class="btn-clear" type="submit">Limpar Tarefas</button>
+            </form>
         </div>
         <div class="footer">
 
