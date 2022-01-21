@@ -61,10 +61,17 @@ if (isset($_GET['key'])) {
 
                 foreach ($_SESSION['tasks'] as $key => $task) {
                     echo "<li>
-                                <span>$task</span>
-                                <button type='button' class='btn-clear' onclick='deletar$key()'>Remover</button>
-                                                       
-                             </li>";
+                            <span>$task</span>
+                            <button type='button' class='btn-clear' onclick='deletar$key()'>Remover</button>
+                            <script>
+                                function deletar$key(){
+                                    if (confirm('Confirmar remoção?')) {
+                                        window.location = 'http://localhost/gerenciador-tarefas/?key=$key';
+                                    }
+                                    return false;
+                                }
+                            </script>                      
+                        </li>";
                 }
 
                 echo "</ul>";
