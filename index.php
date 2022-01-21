@@ -13,6 +13,12 @@ if (isset($_GET['task_name'])) {
 
 if (isset($_GET['clear'])) {
     unset($_SESSION['tasks']);
+    unset($_GET['clear']);
+}
+
+if (isset($_GET['key'])) {
+    array_slice($_SESSION['tasks'], $_GET['key'], 1);
+    unset($_GET['key']);
 }
 
 ?>
@@ -50,15 +56,19 @@ if (isset($_GET['clear'])) {
         </div>
         <div class="list-tasks">
             <?php
-                if (isset($_SESSION['tasks'])) {
-                    echo "<ul>";
+            if (isset($_SESSION['tasks'])) {
+                echo "<ul>";
 
-                    foreach ($_SESSION['tasks'] as $key => $task) {
-                        echo "<li>$task</li>";
-                    }
-
-                    echo "</ul>";
+                foreach ($_SESSION['tasks'] as $key => $task) {
+                    echo "<li>
+                                <span>$task</span>
+                                <button type='button' class='btn-clear' onclick='deletar$key()'>Remover</button>
+                                                       
+                             </li>";
                 }
+
+                echo "</ul>";
+            }
 
             ?>
             <form action="" method="get">
