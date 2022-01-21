@@ -11,7 +11,6 @@ if (isset($_GET['task_name'])) {
     unset($_GET['task_name']);
 }
 
-var_dump($_SESSION['tasks'])
 ?>
 
 <!DOCTYPE html>
@@ -58,12 +57,7 @@ var_dump($_SESSION['tasks'])
                 }
 
             ?>
-            <ul>
-                <li>Tarefa 1</li>
-                <li>Tarefa2</li>
-                <li>Tarefa3</li>
-                <li>tarefa 4 </li>
-            </ul>
+
         </div>
         <div class="footer">
 
