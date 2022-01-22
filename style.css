@@ -90,8 +90,7 @@ body {
 
 .list-tasks ul li {
   background: #4db6ac;
-  height: 32px;
-  border: none;
+  height: 54px;
   border-radius: 4px;
   color: #fff;
   margin-top: 4px;
@@ -99,7 +98,7 @@ body {
   padding: 12px;
 
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
 
   transition: background 0.3s;
