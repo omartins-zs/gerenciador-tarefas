@@ -55,7 +55,7 @@ if (isset($_GET['key'])) {
                 <button type="submit">Cadastrar</button>
             </form>
             <?php
-                if ($_SESSION['message']) {
+                if (isset($_SESSION['message'])) {
                     echo "<p style='color: #EF5350';>" . $_SESSION['message'] . "</p>";
                 }
             ?>
