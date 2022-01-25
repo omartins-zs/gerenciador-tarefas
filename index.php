@@ -52,6 +52,10 @@ if (isset($_GET['key'])) {
             <form action="" method="get">
                 <label for="task_name">Tarefa:</label>
                 <input type="text" name="task_name" placeholder="Nome da tarefa">
+                <label for="task_description">Descrição:</label>
+                <input type="text" name="task_description" placeholder="Descrição da tarefa">
+                <label for="task_date">Data</label>
+                <input type="date" name="task_date">
                 <button type="submit">Cadastrar</button>
             </form>
             <?php
