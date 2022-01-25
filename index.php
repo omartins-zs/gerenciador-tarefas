@@ -41,7 +41,8 @@ if (isset($_GET['key'])) {
             <h1>Gerenciador de Tarefas</h1>
         </div>
         <div class="form">
-            <form action="" method="get">
+            <form action="./task.php" method="POST">
+                <input type="hidden" name="insert" value="insert">
                 <label for="task_name">Tarefa:</label>
                 <input type="text" name="task_name" placeholder="Nome da tarefa">
                 <label for="task_description">Descrição:</label>
@@ -67,7 +68,7 @@ if (isset($_GET['key'])) {
 
                 foreach ($_SESSION['tasks'] as $key => $task) {
                     echo "<li>
-                            <span>$task</span>
+                            <span>" . $task['task_name'] . "</span>
                             <button type='button' class='btn-clear' onclick='deletar$key()'>Remover</button>
                             <script>
                                 function deletar$key(){

@@ -18,6 +18,8 @@ if (isset($_POST['task_name'])) {
         unset($_POST['task_description']);
         unset($_POST['task_date']);
 
+        var_dump($_SESSION['tasks']);
+        
     } else {
         $_SESSION['message'] = 'O campo nome da tarefa não pode estar vazio!';
     }
