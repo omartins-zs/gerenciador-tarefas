@@ -12,10 +12,6 @@ if (isset($_GET['clear'])) {
     unset($_GET['clear']);
 }
 
-if (isset($_GET['key'])) {
-    array_splice($_SESSION['tasks'], $_GET['key'], 1);
-    unset($_GET['key']);
-}
 
 ?>
 
@@ -73,7 +69,7 @@ if (isset($_GET['key'])) {
                             <script>
                                 function deletar$key(){
                                     if (confirm('Confirmar remoção?')) {
-                                        window.location = 'http://localhost/gerenciador-tarefas/?key=$key';
+                                        window.location = 'http://localhost/gerenciador-tarefas/task.php?key=$key';
                                     }
                                     return false;
                                 }
