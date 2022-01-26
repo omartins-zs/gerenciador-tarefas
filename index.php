@@ -37,7 +37,7 @@ if (isset($_GET['clear'])) {
             <h1>Gerenciador de Tarefas</h1>
         </div>
         <div class="form">
-            <form action="./task.php" method="POST">
+            <form action="./task.php" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="insert" value="insert">
                 <label for="task_name">Tarefa:</label>
                 <input type="text" name="task_name" placeholder="Nome da tarefa">
@@ -45,6 +45,8 @@ if (isset($_GET['clear'])) {
                 <input type="text" name="task_description" placeholder="Descrição da tarefa">
                 <label for="task_date">Data</label>
                 <input type="date" name="task_date">
+                <label for="task_image">Imagem:</label>
+                <input type="file" name="task_image" id="">
                 <button type="submit">Cadastrar</button>
             </form>
             <?php
