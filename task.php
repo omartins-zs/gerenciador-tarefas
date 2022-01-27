@@ -18,7 +18,8 @@ if (isset($_POST['task_name'])) {
         $data = [
             'task_name' => $_POST['task_name'],
             'task_description' => $_POST['task_description'],
-            'task_date' => $_POST['task_date']
+            'task_date' => $_POST['task_date'],
+            'task_image' => $file_name
         ];
 
         array_push($_SESSION['tasks'], $data);
