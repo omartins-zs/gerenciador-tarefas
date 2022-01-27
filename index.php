@@ -12,6 +12,8 @@ if (isset($_GET['clear'])) {
     unset($_GET['clear']);
 }
 
+var_dump($_SESSION['tasks']);
+
 
 ?>
 
