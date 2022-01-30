@@ -7,11 +7,6 @@ if (!isset($_SESSION['tasks'])) {
 }
 
 
-if (isset($_GET['clear'])) {
-    unset($_SESSION['tasks']);
-    unset($_GET['clear']);
-}
-
 var_dump($_SESSION['tasks']);
 
 
@@ -85,10 +80,7 @@ var_dump($_SESSION['tasks']);
             }
 
             ?>
-            <form action="" method="get">
-                <input type="hidden" name="clear" value="clear">
-                <button class="btn-clear" type="submit">Limpar Tarefas</button>
-            </form>
+
         </div>
         <div class="footer">
 
