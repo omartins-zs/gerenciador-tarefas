@@ -6,10 +6,6 @@ if (!isset($_SESSION['tasks'])) {
     $_SESSION['tasks'] = array();
 }
 
-
-var_dump($_SESSION['tasks']);
-
-
 ?>
 
 <!DOCTYPE html>
