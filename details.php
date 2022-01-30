@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 session_start();
@@ -28,7 +28,25 @@ $data = $_SESSION['tasks'][$_GET['key']];
 <body>
     <div class="details-container">
         <div class="header">
+            <h1><?php echo $data['task_name']; ?></h1>
+        </div>
+        <div class="row">
+            <div class="details">
+                <dl>
+                    <dt>Descrição da tarefa:</dt>
+                    <dd><?php echo $data['task_description'] ?></dd>
+                    <dt>Data da tarefa:</dt>
+                    <dd><?php echo $data['task_date'] ?></dd>
+                </dl>
+            </div>
+            <div class="image">
+                <img src="uploads/<?php echo $data['task_image']?>" alt="Imagem tarefa">
+            </div>
+        </div>
+        <div class="footer">
+           <p>Desenvolvido por Gabriel Martins</p> 
         </div>
     </div>
 </body>
+
 </html>
