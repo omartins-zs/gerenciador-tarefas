@@ -1,11 +1,18 @@
 <?php
 
+require __DIR__ . './connect.php';
+
 session_start();
 
 if (!isset($_SESSION['tasks'])) {
     $_SESSION['tasks'] = array();
 }
 
+// STMT = Statement é utilizado para executar instruções SQL.
+$stmt = $conn->prepare("SELECT * FROM tasks");
+$stmt->execute();
+// PDO::FETCH_ASSOC, são responsáveis por retornar a consulta e o estilo do dado retornado, ou seja ele retornará um array associativo.
+$stmt->setFetchMode(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -54,16 +61,16 @@ if (!isset($_SESSION['tasks'])) {
         </div>
         <div class="list-tasks">
             <?php
-            if (isset($_SESSION['tasks'])) {
                 echo "<ul>";
 
-                foreach ($_SESSION['tasks'] as $key => $task) {
+                foreach ($stmt->fetchAll() as $task) {
                     echo "<li>
-                            <a href='details.php?key=$key'>" . $task['task_name'] . "</a>                            <button type='button' class='btn-clear' onclick='deletar$key()'>Remover</button>
+                            <a href='details.php?key=" . $task['id'] . "'>" . $task['task_name'] . "</a>
+                            <button type='button' class='btn-clear' onclick='deletar".$task['id']."()'>Remover</button>
                             <script>
-                                function deletar$key(){
+                                function deletar".$task['id']."(){
                                     if (confirm('Confirmar remoção?')) {
-                                        window.location = 'http://localhost/gerenciador-tarefas/task.php?key=$key';
+                                        window.location = 'http://localhost/gerenciador-tarefas/task.php?key".$task['id']."';
                                     }
                                     return false;
                                 }
@@ -72,7 +79,7 @@ if (!isset($_SESSION['tasks'])) {
                 }
 
                 echo "</ul>";
-            }
+            
 
             ?>
 
