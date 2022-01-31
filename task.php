@@ -32,7 +32,14 @@ if (isset($_POST['task_name'])) {
         $stmt->bindParam('image', $file_name);
         $stmt->bindParam('date', $_POST['task_date']);
 
-        
+        // Excluido o Array push e unset
+        if ($stmt->execute()) {
+            $_SESSION['success'] = "Dados cadastrados!";
+            header('Location:index.php');
+        } else {
+            $_SESSION['error'] = "Dados não cadastrados!";
+            header('Location:index.php');
+        }
 
     } else {
         $_SESSION['message'] = 'O campo nome da tarefa não pode estar vazio!';
