@@ -176,15 +176,15 @@ a:hover {
 }
 
 .details dl dt {
-  margin-top: 4px ;
-  margin-bottom :4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   font-weight: bold;
   color: #666;
 }
 
 .details dl dd {
-  margin-top: 4px ;
-  margin-bottom:12px; 
+  margin-top: 4px;
+  margin-bottom: 12px;
   color: #999;
 }
 
@@ -200,4 +200,18 @@ a:hover {
 .image img {
   max-width: 100%;
   height: auto;
+}
+
+.alert-success {
+  background: #c5ea15;
+  margin: 4px;
+  padding: 12px;
+  color: #7cb342;
+}
+
+.alert-error {
+  background: #ffab91;
+  margin: 4px;
+  padding: 12px;
+  color: #f4511e;
 }
