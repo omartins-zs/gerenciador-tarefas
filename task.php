@@ -1,5 +1,6 @@
 <?php
 
+require __DIR__ .'./connect.php';
 
 session_start();
 
@@ -21,13 +22,12 @@ if (isset($_POST['task_name'])) {
             'task_date' => $_POST['task_date'],
             'task_image' => $file_name
         ];
+        
 
+        // Exclui 3 unset que Havia esquecido se necessario Pegar no Commit Anterior
         array_push($_SESSION['tasks'], $data);
-        unset($_POST['task_name']);
-        unset($_POST['task_description']);
-        unset($_POST['task_date']);
-
         header('Location:index.php');
+
     } else {
         $_SESSION['message'] = 'O campo nome da tarefa não pode estar vazio!';
         header('Location:index.php');
