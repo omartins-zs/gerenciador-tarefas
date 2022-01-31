@@ -1,10 +1,18 @@
 <?php
 
 
+require __DIR__ . './connect.php';
+
+
 session_start();
 
 
-$data = $_SESSION['tasks'][$_GET['key']];
+$stmt = $conn->prepare("SELECT * FROM tasks WHERE id = :id");
+$stmt->bindParam(':id', $_GET['key']);
+$stmt->execute();
+$data = $stmt->fetchAll();
+
+var_dump($data);
 
 ?>
 
