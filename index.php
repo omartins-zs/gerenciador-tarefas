@@ -89,7 +89,7 @@ $stmt->setFetchMode(PDO::FETCH_ASSOC);
                             <script>
                                 function deletar" . $task['id'] . "(){
                                     if (confirm('Confirmar remoção?')) {
-                                        window.location = 'http://localhost/gerenciador-tarefas/task.php?key" . $task['id'] . "';
+                                        window.location = 'http://localhost/gerenciador-tarefas/task.php?key=".$task['id']."';
                                     }
                                     return false;
                                 }
