@@ -12,8 +12,6 @@ $stmt->bindParam(':id', $_GET['key']);
 $stmt->execute();
 $data = $stmt->fetchAll();
 
-var_dump($data);
-
 ?>
 
 
@@ -36,19 +34,19 @@ var_dump($data);
 <body>
     <div class="details-container">
         <div class="header">
-            <h1><?php echo $data['task_name']; ?></h1>
+            <h1><?php echo $data[0]['task_name']; ?></h1>
         </div>
         <div class="row">
             <div class="details">
                 <dl>
                     <dt>Descrição da tarefa:</dt>
-                    <dd><?php echo $data['task_description'] ?></dd>
+                    <dd><?php echo $data[0]['task_description'] ?></dd>
                     <dt>Data da tarefa:</dt>
-                    <dd><?php echo $data['task_date'] ?></dd>
+                    <dd><?php echo $data[0]['task_date'] ?></dd>
                 </dl>
             </div>
             <div class="image">
-                <img src="uploads/<?php echo $data['task_image']?>" alt="Imagem tarefa">
+                <img src="uploads/<?php echo $data[0]['task_image']?>" alt="Imagem tarefa">
             </div>
         </div>
         <div class="footer">
