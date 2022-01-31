@@ -33,6 +33,25 @@ $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
 <body>
     <div class="container">
+        <!-- SESSION DE SUCESSO -->
+        <?php
+            if (isset($_SESSION['success'])) {
+        ?>
+            <div class="alert-success"> <?php echo $_SESSION['success']; ?> </div>
+        <?php
+            unset($_SESSION['success']);
+            }
+        ?>
+        <!-- SESSION DE ERROR -->
+        <?php
+            if (isset($_SESSION['error'])) {
+        ?>
+            <div class="alert-error"> <?php echo $_SESSION['error']; ?> </div>
+        <?php
+            unset($_SESSION['error']);
+            }
+        ?>
+
         <div class="header">
             <h1>Gerenciador de Tarefas</h1>
         </div>
@@ -50,10 +69,10 @@ $stmt->setFetchMode(PDO::FETCH_ASSOC);
                 <button type="submit">Cadastrar</button>
             </form>
             <?php
-                if (isset($_SESSION['message'])) {
-                    echo "<p style='color: #BC413E';>" . $_SESSION['message'] . "</p>";
-                    unset($_SESSION['message']);
-                }
+            if (isset($_SESSION['message'])) {
+                echo "<p style='color: #BC413E';>" . $_SESSION['message'] . "</p>";
+                unset($_SESSION['message']);
+            }
             ?>
         </div>
         <div class="separator">
@@ -61,25 +80,25 @@ $stmt->setFetchMode(PDO::FETCH_ASSOC);
         </div>
         <div class="list-tasks">
             <?php
-                echo "<ul>";
+            echo "<ul>";
 
-                foreach ($stmt->fetchAll() as $task) {
-                    echo "<li>
+            foreach ($stmt->fetchAll() as $task) {
+                echo "<li>
                             <a href='details.php?key=" . $task['id'] . "'>" . $task['task_name'] . "</a>
-                            <button type='button' class='btn-clear' onclick='deletar".$task['id']."()'>Remover</button>
+                            <button type='button' class='btn-clear' onclick='deletar" . $task['id'] . "()'>Remover</button>
                             <script>
-                                function deletar".$task['id']."(){
+                                function deletar" . $task['id'] . "(){
                                     if (confirm('Confirmar remoção?')) {
-                                        window.location = 'http://localhost/gerenciador-tarefas/task.php?key".$task['id']."';
+                                        window.location = 'http://localhost/gerenciador-tarefas/task.php?key" . $task['id'] . "';
                                     }
                                     return false;
                                 }
                             </script>                      
                         </li>";
-                }
+            }
 
-                echo "</ul>";
-            
+            echo "</ul>";
+
 
             ?>
 
