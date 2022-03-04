@@ -2,4 +2,5 @@
 
 
 
-Tutorial : link
+
+Referencia de cores [HTML COLORS](https://htmlcolors.com/)
