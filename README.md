@@ -1,4 +1,4 @@
-<h1 align="center"><img align="left" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/php/php-plain.svg"><img align="left" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg">Gerenciador de Tarefas<img align="right" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/php/php-plain.svg"><img align="right" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg"></h1>
+<h1 align="center"><img align="left" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/php/php-plain.svg"><img align="left" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg">📋Gerenciador de Tarefas<img align="right" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/php/php-plain.svg"><img align="right" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg"></h1>
 
  <div align="center">
 
