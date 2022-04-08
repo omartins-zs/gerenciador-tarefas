@@ -3,6 +3,7 @@ CREATE DATABASE gerenciadorTarefas
 GO
 
 USE gerenciadorTarefas
+
 GO
 
 CREATE TABLE tasks (
@@ -13,6 +14,5 @@ CREATE TABLE tasks (
     task_date DATE
 )
 GO
-
 
 INSERT INTO `tasks` (`id`, `task_name`, `task_description`, `task_image`, `task_date`) VALUES (NULL, 'teste', 'teste de descriçao', NULL, '2022-01-01'), (NULL, 'teste 2', 'teste 2 descricao', NULL, '2022-01-31')
