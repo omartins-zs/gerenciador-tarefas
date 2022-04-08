@@ -2,7 +2,7 @@
 
  <div align="center">
 
-   <cite align="center"><i>`Tela com um formulário para login`</i></cite>
+   <cite align="center"><i>`Gerenciador de tarefas com Imagens e Detalhes da tarefa`</i></cite>
 
 </div>
 
